@@ -5,6 +5,8 @@ This code should compile everywhere and survive to all warning flags (*).
 
 ## How to build ##
 
+To build the library invoke `make' binary.
+
 ### Make goals ###
 
 * all (default) : Build static/dynamic library.
@@ -21,8 +23,8 @@ This code should compile everywhere and survive to all warning flags (*).
 * LDFLAGS       : Linker flags.
 * RM            : Binary used to delete files (default `rm').
 
-#### Example ####
+## How to use ##
 
-`make CC="gcc" LD="gcc" CFLAGS="-Wall -pedantic" LDFLAGS="-shared"`
+
 
 (*) Almost
