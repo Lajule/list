@@ -32,7 +32,7 @@ To use this code, give your compiler access to this directory and link your bina
 	#include "list.h"
 	...
 	typedef struct int_list_s {
-		/* this must be fisrt */
+		/* this must be first */
 		struct int_list_s *next;
 		int element;
 	} int_list_t;
