@@ -7,13 +7,13 @@ This code should compile everywhere and survive to all warning flags (*).
 
 To build the library invoke `make' binary.
 
-### Make goals ###
+### Goals ###
 
 * all (default) : Build static/dynamic library.
 * clean         : Delete object files. 
 * realclean     : Delete object files and targets.
 
-### Makefile variables ###
+### Variables ###
 
 * CC            : Compiler (default `cc').
 * AR            : Archiver (default `ar').
