@@ -9,9 +9,9 @@ You need to invoke `make' binary to build the library.
 
 ### Goals ###
 
-* all (default) : Build static/dynamic library.
-* clean         : Delete object files. 
-* realclean     : Delete object files and targets.
+* all (default) : Builds static/dynamic library.
+* clean         : Deletes object files. 
+* realclean     : Deletes object files and targets.
 
 ### Variables ###
 
