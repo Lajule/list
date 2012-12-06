@@ -3,7 +3,11 @@ list
 
 This code should compile everywhere and survive to all warning flags (*).
 
+(*) Almost
+
 ## Build ##
+
+To build the library:
 
 	$ make
 
@@ -30,6 +34,3 @@ The following example shows how to use a simply linked list:
 	assert(l_size((list_t *)list) == 1);
 	list = (int_list_t *)l_free((list_t *)list, NULL);
 	...
-
-
-_(*) Almost_
