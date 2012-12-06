@@ -13,7 +13,7 @@ To build the library:
 
 ## Example ##
 
-The following example shows how to use a simply linked list:
+The following example shows how to use a simply linked list of integers:
 
 	#include "list.h"
 	...
