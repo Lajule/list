@@ -31,4 +31,5 @@ The following example shows how to use a simply linked list:
 	list = (int_list_t *)l_free((list_t *)list, NULL);
 	...
 
-(*) Almost
+
+_(*) Almost_
