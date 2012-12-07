@@ -13,24 +13,25 @@ To build the library:
 
 ## Example ##
 
-The following example shows how to use a simply linked list of integers:
+The following example shows how to use a simply linked list:
 
 	#include "list.h"
 	...
-	typedef struct int_list_s {
+	typedef struct person_s {
 		/* This must be first */
-		struct int_list_s *next;
-		int element;
-	} int_list_t;
+		struct person_s *next;
+		int id;
+	} person_t;
 	...
-	int_list_t *list, *node;
+	person_t *list, *person;
 	...
+	/* Always initialize a list to NULL */
 	list = NULL;
 	...
-	node = calloc(1, sizeof(int_list_t));
-	node->element = 0;
-	list = (int_list_t *)l_push((list_t *)list, (list_t *)node);
+	person = calloc(1, sizeof(person_t));
+	person->id = 0;
+	list = (person_t *)l_push((list_t *)list, (list_t *)person);
 	...
 	assert(l_size((list_t *)list) == 1);
-	list = (int_list_t *)l_free((list_t *)list, NULL);
+	list = (person_t *)l_free((list_t *)list, NULL);
 	...
