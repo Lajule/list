@@ -13,7 +13,7 @@ To build the library:
 
 ## Example ##
 
-How to declare a a simply linked list:
+The following example shows how to use a simply linked list:
 
 	#include "list.h"
 
@@ -23,9 +23,7 @@ How to declare a a simply linked list:
 	} person_t;
 
 	person_t *list = NULL;   /* Always initialize a list to NULL */
-
-How to manipulate the previous list:
-
+	
 	person_t *person = calloc(1, sizeof(person_t));
 	person->id = 0;
 	list = (person_t *)l_push((list_t *)list, (list_t *)person);
