@@ -1,9 +1,3 @@
-/*        __          _______    __
- *       / /  ___    /__  __/ __/ /  ____
- *      / /  / _ | __  / / / / / /  / __/        list
- *     / /__/ __ |/ /_/ / /_/ / /__/ -__         2012, Julien Rouzieres
- *    /____/_/ |_|\____/|____/____/____/         https://github.com/Lajule/list
- */
 #ifndef LIST_H
 #define LIST_H
 
