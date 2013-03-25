@@ -1,0 +1,8 @@
+AC_INIT(list, 0.1, julien.rouzieres@mac.com)
+AM_INIT_AUTOMAKE
+AC_MSG_NOTICE(Singly linked lists and binary trees C library)
+AC_PROG_CC
+AC_PROG_RANLIB
+AC_CHECK_HEADERS(assert.h stddef.h stdlib.h)
+AC_CONFIG_HEADERS(config.h)
+AC_OUTPUT(Makefile src/Makefile)
