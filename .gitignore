@@ -16,4 +16,5 @@
 *.out
 *.app
 
+# OSX files
 .DS_Store
