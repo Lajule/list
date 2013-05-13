@@ -23,12 +23,14 @@ The following example shows how to use a singly linked list:
 #include "list.h"
 
 typedef struct person_s {
-  struct person_s *next;	/* This must be first */
+  /* This must be first */
+  struct person_s *next;
   int id;
 } person_t;
 
 ...
-person_t *list = NULL;		/* Always initialize a list to NULL */
+/* Always initialize a list to NULL */
+person_t *list = NULL;
 	
 person_t *person = calloc(1, sizeof(person_t));
 person->id = 0;
