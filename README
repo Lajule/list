@@ -1,44 +1,34 @@
-list
-====
+list 0.1
 
 This code should compile everywhere and survive to all warning flags (*).
 
-## Bootstrap ##
-
 To initialize the package, use:
 
-$ ./bootstrap
-
-## Build ##
+  $ ./bootstrap
 
 To build the library, use:
 
-$ ./configure
-$ make
+  $ ./configure
+  $ make
 
-## Example ##
+The following code shows how to declare a singly linked list:
 
-The following example shows how to use a singly linked list:
+  #include "list.h"
 
-#include "list.h"
+  typedef struct person_s {
+    /* This must be first */
+    struct person_s *next;
+    int id;
+  } person_t;
 
-typedef struct person_s {
-  /* This must be first */
-  struct person_s *next;
-  int id;
-} person_t;
+  /* Always initialize a list to NULL */
+  person_t *list = NULL;
 
-...
-/* Always initialize a list to NULL */
-person_t *list = NULL;
-	
-person_t *person = calloc(1, sizeof(person_t));
-person->id = 0;
+Manipulate the previous structure like this:
 
-list = (person_t *)l_push((list_t *)list, (list_t *)person);
-assert(l_size((list_t *)list) == 1);
+  list = (person_t *)l_push((list_t *)list, (list_t *)person);
+  assert(l_size((list_t *)list) == 1);
 
-list = (person_t *)l_free((list_t *)list, NULL);
-...
+  list = (person_t *)l_free((list_t *)list, NULL);
 
 (*) Almost
