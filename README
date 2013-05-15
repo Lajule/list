@@ -31,4 +31,5 @@ Manipulate the previous structure like this:
 
   list = (person_t *)l_free((list_t *)list, NULL);
 
+
 (*) Almost
