@@ -1,15 +1,15 @@
 Play with linked lists and binary trees easily !
 
 This library provides a basic set of functions for both structures.
+
 Only one rule to use the library, declare your structures like this :
 
-struct list {
-  struct list *next;
-  ...
-};
-
-struct tree {
-  struct tree *left;
-	struct tree *right;
-  ...
-};
+  ----------------------------------------------------
+  |      Linked lists      |      Binary trees       |
+  |------------------------|--------------------------
+  |  struct list {         |  struct tree {          |
+  |    struct list *next;  |    struct tree *left;   |
+  |    ...                 |    struct tree *right;  |
+  |  };                    |    ...                  |
+  |                        |  };                     |
+  ----------------------------------------------------
