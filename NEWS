@@ -1,2 +1,2 @@
 0.1:
-* The library use the GNU build system now.
+* Switch to GNU Build System instead of using a custom Makefile.
