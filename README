@@ -2,34 +2,4 @@ list 0.1
 
 This code should compile everywhere and survive to all warning flags (*).
 
-To initialize the package, use:
-
-  $ ./bootstrap
-
-To build the library, use:
-
-  $ ./configure
-  $ make
-
-The following code shows how to declare a singly linked list:
-
-  #include "list.h"
-
-  typedef struct person_s {
-    /* This must be first */
-    struct person_s *next;
-    int id;
-  } person_t;
-
-  /* Always initialize a list to NULL */
-  person_t *list = NULL;
-
-Manipulate the previous structure like this:
-
-  list = (person_t *)l_push((list_t *)list, (list_t *)person);
-  assert(l_size((list_t *)list) == 1);
-
-  list = (person_t *)l_free((list_t *)list, NULL);
-
-
 (*) Almost
