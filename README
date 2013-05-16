@@ -1,5 +1,1 @@
-list 0.1
-
-This code should compile everywhere and survive to all warning flags (*).
-
-(*) Almost
+Manipulate linked lists and binary trees easly.
