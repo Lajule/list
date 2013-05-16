@@ -1,22 +1,12 @@
 Play with linked lists and binary trees easily !
 
-This library provides a basic set of functions for both structures. There's
-only one rule to use the library, you have to declare your structures like
-this:
-
-* Linked lists
+This library provides a basic set of functions for both structures. There is
+only one rule for use it, you have to declare your structure like this:
 
   struct list {
     struct list *next;
     ...
   };
 
-* Binary trees
-
-  struct tree {
-    struct tree *left;
-    struct tree *right;
-    ...
-  };
-
-Take a look to `list.h' and `tree.h' in `scr' directory for details.
+You also have to do the same for binary trees, take a look to `list.h' and
+`tree.h' in `scr' directory for more details.
