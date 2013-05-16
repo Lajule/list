@@ -1,3 +1,6 @@
-Play with linked lists and binary trees easly !
+Play with linked lists and binary trees easily !
 
 This library provides a basic set of functions for both structures.
+
+Only one rule to use the library, declare your structures like this :
+
