@@ -10,3 +10,11 @@ only one rule for use it, you have to declare your structure like this:
 
 You also have to do the same for binary trees, take a look to `list.h' and
 `tree.h' in `scr' directory for more details.
+
+Run `bootstrap' script to initialize the package, then come standard
+commands (should be):
+
+  mkdir _build
+  cd _build
+  ../configure
+  make
