@@ -6,7 +6,8 @@ static tree_t *join(tree_t *, tree_t *);
 static tree_t *split(tree_t *, size_t);
 
 tree_t *
-t_put(tree_t *root, tree_t *node, int (*f)(const tree_t *, const tree_t *)) {
+t_put(tree_t *root, tree_t *node,
+	int32_t (*f)(const tree_t *, const tree_t *)) {
 	assert(node && f);
 	if (root) {
 		if (f(root, node) <= 0) {
@@ -20,11 +21,11 @@ t_put(tree_t *root, tree_t *node, int (*f)(const tree_t *, const tree_t *)) {
 }
 
 tree_t *
-t_erase(tree_t *root, tree_t *node, int (*c)(const tree_t *, const tree_t *),
-	void (*f)(tree_t *)) {
+t_erase(tree_t *root, tree_t *node,
+	int32_t (*c)(const tree_t *, const tree_t *), void (*f)(tree_t *)) {
 	assert(node && c);
 	if (root) {
-		int compare = c(root, node);
+		int32_t compare = c(root, node);
 		if (!compare) {
 			tree_t *tmp = root;
 			root = join(root->left, root->right);
@@ -54,10 +55,11 @@ t_free(tree_t *root, void (*f)(tree_t *)) {
 }
 
 tree_t *
-t_find(tree_t *root, tree_t *node, int (*f)(const tree_t *, const tree_t *)) {
+t_find(tree_t *root, tree_t *node,
+	int32_t (*f)(const tree_t *, const tree_t *)) {
 	assert(node && f);
 	if (root) {
-		int compare = f(root, node);
+		int32_t compare = f(root, node);
 		if (!compare)
 			return root;
 		if (compare < 0) {
@@ -115,8 +117,8 @@ t_node(tree_t *root, size_t position) {
 }
 
 tree_t *
-t_iter(tree_t *root,
-	int (*pre)(tree_t *), int (*in)(tree_t *), int (*post)(tree_t *)) {
+t_iter(tree_t *root, int32_t (*pre)(tree_t *), int32_t (*in)(tree_t *),
+	int32_t (*post)(tree_t *)) {
 	if (root) {
 		tree_t *node;
 		if (pre && pre(root))

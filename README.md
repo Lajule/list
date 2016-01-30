@@ -18,8 +18,8 @@ You also have to do the same for binary trees, take a look to *list.h* and
 ## build
 
 ```
-mkdir _build
-cd _build
+mkdir build
+cd build
 cmake ..
 make
 ```

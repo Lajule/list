@@ -3,7 +3,7 @@
 #include "list.h"
 
 static list_t *split(list_t *);
-static list_t *merge(list_t *, list_t *, int (*)(const list_t *, const
+static list_t *merge(list_t *, list_t *, int32_t (*)(const list_t *, const
 list_t *));
 
 list_t *
@@ -86,7 +86,7 @@ l_node(list_t *list, size_t position) {
 }
 
 list_t *
-l_find(list_t *list, list_t *node, int (*f)(const list_t *, const list_t *)) {
+l_find(list_t *list, list_t *node, int32_t (*f)(const list_t *, const list_t *)) {
 	assert(f);
 	while (list && f(node, list))
 		list = list->next;
@@ -94,7 +94,7 @@ l_find(list_t *list, list_t *node, int (*f)(const list_t *, const list_t *)) {
 }
 
 list_t *
-l_iter(list_t *list, int (*f)(list_t *)) {
+l_iter(list_t *list, int32_t (*f)(list_t *)) {
 	assert(f);
 	while (list && !f(list))
 		list = list->next;
@@ -127,7 +127,7 @@ l_cat(list_t *list1, list_t *list2) {
 
 list_t *
 l_insert_if(list_t *list, list_t *node,
-	int (*f)(const list_t *, const list_t *)) {
+	int32_t (*f)(const list_t *, const list_t *)) {
 	assert(f);
 	assert(node);
 	if (!list || f(node, list) <= 0)
@@ -142,7 +142,7 @@ l_insert_if(list_t *list, list_t *node,
 
 list_t *
 l_erase_if(list_t *list, list_t *node,
-	int (*c)(const list_t *, const list_t *), void (*f)(list_t *)) {
+	int32_t (*c)(const list_t *, const list_t *), void (*f)(list_t *)) {
 	if (!list || c(node, list) == 0)
 		return l_pop(list, f);
 	list_t *cursor = list;
@@ -161,7 +161,7 @@ l_erase_if(list_t *list, list_t *node,
 }
 
 list_t *
-l_sort(list_t *list, int (*f)(const list_t *, const list_t *)) {
+l_sort(list_t *list, int32_t (*f)(const list_t *, const list_t *)) {
 	assert(f);
 	if (!list)
 		return NULL;
@@ -184,7 +184,8 @@ split(list_t *list) {
 }
 
 static list_t *
-merge(list_t *list1, list_t *list2, int (*f)(const list_t *, const list_t *)) {
+merge(list_t *list1, list_t *list2,
+	int32_t (*f)(const list_t *, const list_t *)) {
 	if (!list1)
 		return list2;
 	if (!list2)
