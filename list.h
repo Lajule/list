@@ -1,5 +1,4 @@
-#ifndef LIST_H
-#define LIST_H
+#pragma once
 
 #include <stddef.h>
 
@@ -58,5 +57,3 @@ list_t *l_erase_if(list_t *, list_t *,
 /* Sorts (merge algorithm) the list using the given three-way comparison
  * function, returns the head of list. */
 list_t *l_sort(list_t *, int (*)(const list_t *, const list_t *));
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef TREE_H
-#define TREE_H
+#pragma once
 
 #include <stddef.h>
 
@@ -40,5 +39,3 @@ tree_t *t_node(tree_t *, size_t);
  * (if non-zero) return zero. */
 tree_t *t_iter(tree_t *, int (*)(tree_t *), int (*)(tree_t *),
 		int (*)(tree_t *));
-
-#endif
