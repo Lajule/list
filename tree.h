@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stddef.h>
+#include <stdint.h>
 
 /* Binary tree node. */
 typedef struct tree_s {
