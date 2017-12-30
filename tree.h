@@ -15,7 +15,7 @@ tree_t *t_put(tree_t *, tree_t *, int32_t (*)(const tree_t *, const tree_t *));
 /* Calls the given function (if non-zero) on the node selected using the given
  * three-way comparison function before destroy it. */
 tree_t *t_erase(tree_t *, tree_t *, int32_t (*)(const tree_t *, const tree_t *),
-		void (*)(tree_t *));
+	void (*)(tree_t *));
 
 /* Calls the given function (if non-zero) on each node before destroy them,
  * returns zero. */
@@ -39,4 +39,4 @@ tree_t *t_node(tree_t *, size_t);
 /* Walks through tree since pre-order, in-order or post-order given functions
  * (if non-zero) return zero. */
 tree_t *t_iter(tree_t *, int32_t (*)(tree_t *), int32_t (*)(tree_t *),
-		int32_t (*)(tree_t *));
+	int32_t (*)(tree_t *));
