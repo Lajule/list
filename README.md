@@ -12,7 +12,7 @@ struct list {
 };
 ```
 
-You also have to do the same for binary trees, take a look to *list.h* and
+You also have to do the same for binary trees, take a look at *list.h* and
 *tree.h* for more details.
 
 ## build
