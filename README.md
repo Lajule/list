@@ -3,7 +3,7 @@
 Play with linked lists and binary trees easily !
 
 This library provides a basic set of functions for both structures. There's
-only one rule for use it, you have to declare your structure like this:
+only one rule to use it, you have to declare your structure like this:
 
 ```c
 struct list {
