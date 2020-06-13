@@ -36,7 +36,7 @@ size_t t_depth(tree_t *);
 /* Returns the node at the given position. */
 tree_t *t_node(tree_t *, size_t);
 
-/* Walks through tree since pre-order, in-order or post-order given functions
+/* Walks through tree until pre-order, in-order or post-order given functions
  * (if non-zero) return zero. */
 tree_t *t_iter(tree_t *, int32_t (*)(tree_t *), int32_t (*)(tree_t *),
 	int32_t (*)(tree_t *));
